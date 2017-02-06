@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  name = 'danny';
+  title = 'app works!, woop woop';
+  name = 'ninja';
+  ninja = {
+    name: "Ryu",
+    belt: "Red"
+  };
+
+  yell(e) {
+    alert("I am yelling");
+  }
 }

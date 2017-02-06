@@ -1,12 +1,8 @@
 <p>
-  {{homeTitle}}
+{{homeTitle}}
 </p>
-<ng-content></ng-content>
-
-<!-- 2-way data binding -->
-<label>Title:</label>
-<input [(ngModel)]="spam.title" />
-<label>Body:</label>
-<input [(ngModel)]="spam.body" />
-<p>{{spam.title}}</p>
-<p>{{spam.body}}</p>
+<!--
+<p>{{ninja.name}}</p>
+<p>{{ninja.belt}}</p>
+-->
+<button (click)="fireYellEvent($event)">Hit me</button>

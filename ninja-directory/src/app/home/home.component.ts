@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,17 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  spam = {
-    title: "Is there an anime character stronger than Madara Uchiha?",
-    body: "And I'm referring to Rinne Tensei Madara Uchiha with the Eternal Mangekyou Sharingan and Rinnegan doujutsus (with the rikidou paths ability) equipped with his Gunbai and control of the juubi and Gedou Mazou, a complete Susano'o, with Hashirama Senju's DNA implanted in his chest so he can perform Mokuton kekkei genkai and yin-yang release ninjutsu as well as being extremely skilled in taijutsu and bukijutsu."
-  };
+
+  homeTitle = "Welcome to the ninja directory";
+  @Input() ninja;
+  @Output() onYell = new EventEmitter();
 
   alertMe(val) {
     alert(val);
+  }
+
+  fireYellEvent(e) {
+    this.onYell.emit(e)
   }
 
   constructor() { }
 
   ngOnInit() {
   }
+
 }
