@@ -1,7 +1,21 @@
+import { Routes, RouterModule } from '@angular/router';
+
 import { DirectoryComponent } from "./directory/directory.component";
 import { HomeComponent } from "./home/home.component";
 
-export const APP_ROUTES = [ 
-  { path: 'directory', component: DirectoryComponent },
-  { path: '', component: HomeComponent }
+const routes: Routes = [
+  { 
+    path: '', 
+    component: HomeComponent 
+  },
+  { 
+    path: 'directory', 
+    component: DirectoryComponent 
+  } ,  
+  { 
+    path: 'directory/:ninja', 
+    component: DirectoryComponent 
+  }  
 ];
+
+export const Routing = RouterModule.forRoot(routes);
