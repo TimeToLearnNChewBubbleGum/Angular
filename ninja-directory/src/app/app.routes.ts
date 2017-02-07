@@ -11,11 +11,7 @@ const routes: Routes = [
   { 
     path: 'directory', 
     component: DirectoryComponent 
-  } ,  
-  { 
-    path: 'directory/:ninja', 
-    component: DirectoryComponent 
-  }  
+  }
 ];
 
 export const Routing = RouterModule.forRoot(routes);
