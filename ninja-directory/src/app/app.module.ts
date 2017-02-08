@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
 import { Routing } from './app.routes';
 import { FilterPipe } from './filter.pipe';
+import { LoggingService } from './logging.service';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { FilterPipe } from './filter.pipe';
     HttpModule,
     Routing
   ],
-  providers: [],
+  providers: [LoggingService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
